@@ -1,0 +1,18 @@
+# Build outputs.
+# clang names executables with no extension (hello, sum, todo...), so ignore
+# extensionless files under lessons/ and reference/, while keeping folders and
+# anything with an extension (.c, .h, .md).
+/lessons/**/*
+!/lessons/**/
+!/lessons/**/*.*
+/reference/**/*
+!/reference/**/
+!/reference/**/*.*
+
+# Debug symbols from -g (these folders have a dot, so list them explicitly).
+*.dSYM/
+
+# Other compiler and macOS leftovers.
+a.out
+*.o
+.DS_Store
